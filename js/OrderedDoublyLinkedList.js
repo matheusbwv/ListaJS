@@ -80,13 +80,13 @@ remove(value) {
     }
     throw new Error('Valor não encontrado');
 }
-remove(position) {
-    const index = this.indexOf(position);
+removeAt(position) {
+    let previous = null;
     let cursor = this.head;
     let i = 0;
     while (cursor) {
         if ((i + 1) === position) {
-            if (i=== index) {
+            if (i !== 0) {
                 cursor.previous.next = cursor.next;
             }else{
                 this.head = cursor.next;
