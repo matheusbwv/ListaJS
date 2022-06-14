@@ -1,3 +1,7 @@
-# FilaJS
+# Trabalho de Estrutura de dados
 
-Project intended to teach ***Linked List*** data structure in JavaScript for students undergraduate in FJN.
+💻🥇
+
+
+
+
