@@ -80,18 +80,29 @@ remove(value) {
     }
     throw new Error('Valor não encontrado');
 }
-remove(value) {
+remove(position) {
+    const index = this.indexOf(position);
     let cursor = this.head;
     let i = 0;
     while (cursor) {
-        if (cursor.content === value) {
-            return this.removeAt(i + 1);
+        if ((i + 1) === position) {
+            if (i=== index) {
+                cursor.previous.next = cursor.next;
+            }else{
+                this.head = cursor.next;
+            }
+            if (cursor.next) {
+                cursor.next.previous = previous;
+            }
+            this.length--;
+            return;
         }
+        previous = cursor;
         cursor = cursor.next;
         i++
     }
     throw new Error('Valor não encontrado');
+}
+}
 
-}
-}
 
