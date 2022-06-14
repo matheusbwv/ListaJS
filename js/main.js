@@ -1,4 +1,6 @@
-var list = new OrderedLinkedList();
+var list = new OrderedDoublyLinkedList();
+
+console.log(list)
 
 $().ready(function () {
     $('#insert').click(insertElement);
@@ -15,14 +17,14 @@ function showData() {
     out.empty();
     out.append(text);
 }
-
 function insertElement() {
-
+    
     try {
         let val = prompt('digite um valor a ser inserido:');
         list.append(parseInt(val));
         showData();
     } catch (error) {
+        console.log(error);
         alert(error.message);
     }
 
